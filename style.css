@@ -58,23 +58,33 @@ body{
 
 }
 
-.imgBox{
+#imgBox{
  width: 200px;
  border-radius: 5px;
  max-height: 0;
  overflow: hidden;
- transition: max-height 1s;
- 
+ transition: max-height 1s ease-in-out, margin 0.3s;
+
 }
 
-.imgBox img{
+#imgBox img{
     width: 100%;
     padding: 10px;
+    display: block;
 
 }
 
-.imgBox.show-img{
+#imgBox.show-img{
     max-height: 300px;
-    margin:10px auto ;
+    margin:20px auto ;
     border: 1px solid #da1414;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+    0%{
+        transform: translate(0%);
+    }
 }
